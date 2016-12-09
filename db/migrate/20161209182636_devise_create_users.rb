@@ -4,10 +4,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string   :name_user, null: false, default: ""
-      t.integer  :phone_user, null: false, default: ""
-      t.integer  :state,    null: false, default: 1
-      t.integer  :range,    null: false, default: 1
 
       ## Recoverable
       t.string   :reset_password_token
@@ -22,6 +18,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.datetime :last_sign_in_at
       t.inet     :current_sign_in_ip
       t.inet     :last_sign_in_ip
+
+      t.string   :name_user,  default: ""
+      t.integer  :phone_user, default: ""
+      t.integer  :state, default: 1
+      t.integer  :range, default: 1
 
       ## Confirmable
       # t.string   :confirmation_token
